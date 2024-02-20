@@ -19,6 +19,8 @@ This is a simple Express application that provides APIs for managing and retriev
 - `GET /review/:isbn`: Returns the reviews of a book based on ISBN
 - `PUT /auth/review/:isbn`: Adds a book review (requires user authentication)
 - `DELETE /auth/review/:isbn`: Deletes a book review (requires user authentication)
+- `POST /login`: Authenticates a user's credentials and logs them in if valid. A JSON Web Token (JWT) is generated and stored in the user's session for subsequent requests.
+- `POST /register`: Registers a new user with a username and password. If the username is already taken, the registration fails.
 
 ## Authentication
 User authentication is required for adding and deleting book reviews. This application uses JSON Web Tokens (JWT) for authentication. The JWT contains the username of the user, which is used to associate the review with the user.
